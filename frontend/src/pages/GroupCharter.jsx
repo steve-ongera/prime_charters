@@ -1,0 +1,1 @@
+export { GroupCharter } from './ServicePages'
