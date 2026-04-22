@@ -1,0 +1,33 @@
+.services-section .section__header {
+  max-width: 560px;
+}
+
+.services-section__sub {
+  margin-top: var(--space-sm);
+  font-size: 1rem;
+  color: var(--clr-grey);
+  max-width: 500px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+/* Make last row of 2 items center */
+.services-grid .service-card:nth-child(4) {
+  grid-column: 1;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
