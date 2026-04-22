@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PageLayout from './components/layout/PageLayout'
@@ -19,7 +20,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public site */}
+        {/* ── Public site ── */}
         <Route element={<PageLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/private-jet" element={<PrivateJet />} />
@@ -32,7 +33,7 @@ export default function App() {
           <Route path="/booking-confirmation" element={<BookingConfirmation />} />
         </Route>
 
-        {/* Admin panel — no main layout */}
+        {/* ── Admin panel — no main layout, each page uses AdminLayout ── */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/bookings" element={<AdminBookings />} />
